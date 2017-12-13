@@ -48,9 +48,34 @@ module.exports = (function() {
     })
   }
 
+  function _removeData(collection, query) {
+    return new Promise((resolve, reject) => {
+      db.collection(collection).deleteOne(query, (err, result) => {
+        if (err) return reject('MongoDB: Unable to remove document:: ' + err)
+        console.log('MongoDB: Document removed', JSON.stringify(query))
+        resolve(result)
+      })
+    })
+  }
+
+  function _dropCollection(collection, id) {
+    return new Promise((resolve, reject) => {
+      //Check if exists and drop it
+      db.collection(collection) &&
+        db.collection(collection).drop((err, result) => {
+          if (err) return reject('MongoDB: Unable to drop collection:: ' + err)
+          console.log('MongoDB: Collection dropped')
+          resolve(result)
+        })
+      resolve() //Collection does not exist
+    })
+  }
+
   return {
     init: _init,
     writeData: _writeData,
-    readData: _readData
+    readData: _readData,
+    removeData: _removeData,
+    dropCollection: _dropCollection
   }
 })()
