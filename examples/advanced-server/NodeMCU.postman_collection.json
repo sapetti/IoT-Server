@@ -1,0 +1,70 @@
+{
+	"id": "44311d1f-5b06-21ad-7df1-a4c4405d4b0b",
+	"name": "NodeMCU",
+	"description": "",
+	"order": [
+		"b4c7e0bd-9573-d948-7e14-7d3d85f86750",
+		"f04f9c4f-dc11-4530-2879-8b7ce811ebe4"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1513935554045,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "b4c7e0bd-9573-d948-7e14-7d3d85f86750",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/sensor",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "44311d1f-5b06-21ad-7df1-a4c4405d4b0b",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Post",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1514376151376,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"name\": \"NodeMCU1\",\n\t\"location\": \"/room/light\"\n}"
+		},
+		{
+			"id": "f04f9c4f-dc11-4530-2879-8b7ce811ebe4",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/sensor/3",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "44311d1f-5b06-21ad-7df1-a4c4405d4b0b",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1514376165941,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
